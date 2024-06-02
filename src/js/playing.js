@@ -23,7 +23,7 @@ export class Playing extends Scene {
         }
     }
     createEnemy() {
-        const enemy = new Enemy();
+        const enemy = new Enemy(Math.random() * -500);
         this.add(enemy);
     }
     onInitialize() {
@@ -37,7 +37,7 @@ export class Playing extends Scene {
             this.add(player);
         }
         for (let a = 0; a < 10; a++) {
-            const enemy = new Enemy();
+            const enemy = new Enemy(Math.random() * -200);
             this.add(enemy);
         }
         for (let b = 0; b < 10; b++) {
